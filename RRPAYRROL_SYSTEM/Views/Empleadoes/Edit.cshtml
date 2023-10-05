@@ -1,0 +1,69 @@
+﻿@model RRPAYRROL_SYSTEM.Models.Empleado
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Empleado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdEmpleado" />
+            <div class="form-group">
+                <label asp-for="Codigo" class="control-label"></label>
+                <input asp-for="Codigo" class="form-control" />
+                <span asp-validation-for="Codigo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumDeCuenta" class="control-label"></label>
+                <input asp-for="NumDeCuenta" class="form-control" />
+                <span asp-validation-for="NumDeCuenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreadoPor" class="control-label"></label>
+                <input asp-for="CreadoPor" class="form-control" />
+                <span asp-validation-for="CreadoPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModificadoPor" class="control-label"></label>
+                <input asp-for="ModificadoPor" class="form-control" />
+                <span asp-validation-for="ModificadoPor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPersonaFK" class="control-label"></label>
+                <input asp-for="IdPersonaFK" class="form-control" />
+                <span asp-validation-for="IdPersonaFK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPuestoFK" class="control-label"></label>
+                <input asp-for="IdPuestoFK" class="form-control" />
+                <span asp-validation-for="IdPuestoFK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdContratoFK" class="control-label"></label>
+                <input asp-for="IdContratoFK" class="form-control" />
+                <span asp-validation-for="IdContratoFK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdEstadoFK" class="control-label"></label>
+                <input asp-for="IdEstadoFK" class="form-control" />
+                <span asp-validation-for="IdEstadoFK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
