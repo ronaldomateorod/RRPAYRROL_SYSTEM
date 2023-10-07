@@ -42,7 +42,7 @@ namespace RRPAYRROL_SYSTEM.Models
         [Required]
         public char Sexo { get; set; }
 
-        public DateTime FechaCreacion { get; set; }
+        //public DateTime FechaCreacion { get; set; }
 
         [ForeignKey("Nacionalidad")]
         public int IdNacionalidadFK { get; set; }
@@ -53,17 +53,17 @@ namespace RRPAYRROL_SYSTEM.Models
         [ForeignKey("Provincia")]
         public int IdProvinciaFK { get; set; }
 
-        [ForeignKey("Usuario")]
-        public int CreadoPor { get; set; }
+        //[ForeignKey("Usuario")]
+        //public int CreadoPor { get; set; }
 
-        [ForeignKey("Usuario")]
-        public int ModificadoPor { get; set; }
+        //[ForeignKey("Usuario")]
+        //public int ModificadoPor { get; set; }
 
         // Relaciones con otras tablas
         public virtual Nacionalidad? Nacionalidad { get; set; }
         public virtual Municipio? Municipio { get; set; }
         public virtual Provincia? Provincia { get; set; }
-        public virtual Usuario? CreadoPorUsuario { get; set; }
-        public virtual Usuario? ModificadoPorUsuario { get; set; }
+        /*public virtual Usuario? CreadoPorUsuario { get; set; }
+        public virtual Usuario? ModificadoPorUsuario { get; set; }*/
     }
 }

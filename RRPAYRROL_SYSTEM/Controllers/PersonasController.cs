@@ -49,9 +49,9 @@ namespace RRPAYRROL_SYSTEM.Controllers
         // GET: Personas/Create
         public IActionResult Create()
         {
-            ViewData["IdMunicipioFK"] = new SelectList(_context.Municipios, "IdMunicipio", "IdMunicipio");
-            ViewData["IdNacionalidadFK"] = new SelectList(_context.Nacionalidades, "IdNacionalidad", "nacionalidad");
-            ViewData["IdProvinciaFK"] = new SelectList(_context.Provincias, "IdProvincia", "IdProvincia");
+            ViewData["IdMunicipioFK"] = new SelectList(_context.Municipios, "IdMunicipio", "Nombre");
+            ViewData["IdNacionalidadFK"] = new SelectList(_context.Nacionalidades, "IdNacionalidad", "Nombre");
+            ViewData["IdProvinciaFK"] = new SelectList(_context.Provincias, "IdProvincia", "Nombre");
             return View();
         }
 
@@ -69,7 +69,7 @@ namespace RRPAYRROL_SYSTEM.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdMunicipioFK"] = new SelectList(_context.Municipios, "IdMunicipio", "IdMunicipio", persona.IdMunicipioFK);
-            ViewData["IdNacionalidadFK"] = new SelectList(_context.Nacionalidades, "IdNacionalidad", "nacionalidad", persona.IdNacionalidadFK);
+            ViewData["IdNacionalidadFK"] = new SelectList(_context.Nacionalidades, "IdNacionalidad", "IdNacionalidad", persona.IdNacionalidadFK);
             ViewData["IdProvinciaFK"] = new SelectList(_context.Provincias, "IdProvincia", "IdProvincia", persona.IdProvinciaFK);
             return View(persona);
         }

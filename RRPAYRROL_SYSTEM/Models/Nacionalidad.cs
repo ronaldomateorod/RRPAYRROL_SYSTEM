@@ -9,6 +9,6 @@ namespace RRPAYRROL_SYSTEM.Models
 
         [Required]
         [StringLength(60)]
-        public string? nacionalidad { get; set; }
+        public string? Nombre { get; set; }
     }
 }

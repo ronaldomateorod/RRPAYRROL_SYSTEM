@@ -26,17 +26,48 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Persona" asp-action="Create">Personas</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Personas" asp-action="Create">Registrar Empleado</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light" sidebar" style="height:470px; border-radius: 25px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+                <div class="position-sticky">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" style="margin-top:25px;margin-left:25px;">
+                        <li class="nav-item" style="margin-bottom:10px;">
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0" style="margin-left:45px;"> <span class="d-none d-sm-inline">Item</span> 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0" style="margin-left:45px;"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" style="margin-bottom:10px;">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy"><i class="fa-solid fa-lock"></i> Privacy</a>
+                        </li>
+                        <li class="nav-item" style="margin-bottom:10px;">
+                            <a class="nav-link" asp-area="" asp-controller="Personas" asp-action="Create"><i class="fas fa-user"></i> Registrar Empleado</a>
+                        </li>
+                        <li class="nav-item" style="margin-bottom:10px;">
+                            <a class="nav-link" asp-area="" asp-controller="Actividad" asp-action="Create"><i class="fa-solid fa-arrow-right-to-bracket"></i> Actividad</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main role="main" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">

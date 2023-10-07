@@ -3,8 +3,12 @@ using RRPAYRROL_SYSTEM.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("server=localhost; database=DBA_RRPAYROLL;")));
+builder.Services.AddDbContext<ApplicationDbContext>(
+    options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString("MyConnetionDB")
+        )
+    );
+    
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

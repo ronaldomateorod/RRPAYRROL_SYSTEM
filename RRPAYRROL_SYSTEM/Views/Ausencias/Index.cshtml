@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RRPAYRROL_SYSTEM.Models.Ausencia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaAusencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pagado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEmpleadoFK)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaAusencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pagado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEmpleadoFK)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdAusencia">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAusencia">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAusencia">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

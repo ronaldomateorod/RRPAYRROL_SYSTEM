@@ -32,13 +32,5 @@ namespace RRPAYRROL_SYSTEM.Models
         public DbSet<DetalleNomina> DetallesNominas { get; set; }
         public DbSet<Concepto> Conceptos { get; set; }
         public DbSet<Pago> Pagos { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-
-            // Configura la cadena de conexión a tu base de datos SQL Server
-            optionsBuilder.UseSqlServer("server=localhost; database=DBA_RRPAYROLL;");
-
-        }
     }
 }

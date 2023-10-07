@@ -8,6 +8,6 @@ namespace RRPAYRROL_SYSTEM.Models
     {
         [Key]
         public int IdMunicipio { get; set; }
-        public string? NombreMunicipio { get; set; }
+        public string? Nombre { get; set; }
     }
 }
